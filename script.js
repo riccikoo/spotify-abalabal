@@ -1,16 +1,8 @@
 const songs = [
   {
-    title: "Welcome to the Black Parade",
-    file: "songs/welcome-to-the-black-parade.mp3",
-  },
-  {
-    title: "Famous Last Words",
-    file: "songs/famous-last-words.mp3",
-  },
-  {
-    title: "Teenagers",
-    file: "songs/teenagers.mp3",
-  },
+    title: "I Don't Love You.mp3",
+    file: "songs/My Chemical Romance - I Don't Love You.mp3",
+  }
 ];
 
 const songList = document.getElementById("song-list");
