@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MCR Web Player</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="player-container">
+    <h1>My Chemical Romance Web Player</h1>
+    <img src="images/mcr.jpg" alt="My Chemical Romance" class="cover" />
+
+    <ul id="song-list" class="song-list"></ul>
+
+    <div id="now-playing" class="now-playing hidden">
+      <p id="now-title">Now Playing: -</p>
+      <button id="play-pause">Play</button>
+      <audio id="audio" controls class="audio" hidden></audio>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

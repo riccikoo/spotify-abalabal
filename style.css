@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.player-container {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.cover {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+}
+
+.song-list li {
+  background: #1e1e1e;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.song-list li:hover {
+  background: #333;
+}
+
+.now-playing {
+  margin-top: 20px;
+}
+
+#audio {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
