@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #121212;
   color: white;
   margin: 0;
@@ -19,43 +19,50 @@ body {
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
-.now-playing {
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-#audio {
-  margin-top: 10px;
+#play-pause {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1db954;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#play-pause:hover {
+  background-color: #1ed760;
+}
+
+.progress-container {
   width: 100%;
 }
 
-button {
-  padding: 10px 20px;
-  font-weight: bold;
-  background: #1db954;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+#progress-bar {
+  width: 100%;
 }
 
-button:hover {
-  background: #1ed760;
-}
-
-.lyrics {
+.lyrics-container {
+  margin-top: 20px;
   text-align: left;
-  background: #1e1e1e;
-  padding: 15px;
+  background-color: #1e1e1e;
+  padding: 20px;
   border-radius: 10px;
-  max-height: 400px;
+  max-height: 300px;
   overflow-y: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.lyrics h3 {
+.lyrics-container h2 {
   margin-top: 0;
 }
 
-.hidden {
-  display: none;
+pre {
+  white-space: pre-wrap;
+  line-height: 1.6;
 }
