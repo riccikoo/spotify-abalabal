@@ -7,7 +7,7 @@ body {
 }
 
 .player-container {
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
   text-align: center;
 }
@@ -19,31 +19,41 @@ body {
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
-.song-list {
-  list-style: none;
-  padding: 0;
-}
-
-.song-list li {
-  background: #1e1e1e;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.song-list li:hover {
-  background: #333;
-}
-
 .now-playing {
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #audio {
   margin-top: 10px;
   width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  font-weight: bold;
+  background: #1db954;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1ed760;
+}
+
+.lyrics {
+  text-align: left;
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.lyrics h3 {
+  margin-top: 0;
 }
 
 .hidden {

@@ -1,41 +1,10 @@
-const songs = [
-  {
-    title: "I Don't Love You.mp3",
-    file: "songs/My Chemical Romance - I Don't Love You.mp3",
-  }
-];
-
-const songList = document.getElementById("song-list");
-const nowPlaying = document.getElementById("now-playing");
-const nowTitle = document.getElementById("now-title");
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("play-pause");
+const lyricsEl = document.getElementById("lyrics");
 
-let currentSong = null;
 let isPlaying = false;
 
-songs.forEach((song, index) => {
-  const li = document.createElement("li");
-  li.textContent = song.title;
-  li.addEventListener("click", () => {
-    playSong(index);
-  });
-  songList.appendChild(li);
-});
-
-function playSong(index) {
-  const song = songs[index];
-  audio.src = song.file;
-  audio.play();
-  currentSong = song;
-  nowTitle.textContent = "Now Playing: " + song.title;
-  nowPlaying.classList.remove("hidden");
-  playPauseBtn.textContent = "Pause";
-  isPlaying = true;
-}
-
 playPauseBtn.addEventListener("click", () => {
-  if (!currentSong) return;
   if (isPlaying) {
     audio.pause();
     playPauseBtn.textContent = "Play";
@@ -45,3 +14,32 @@ playPauseBtn.addEventListener("click", () => {
   }
   isPlaying = !isPlaying;
 });
+
+// Kosongkan lirik
+const lyrics = `Well, when you go
+Don't ever think I'll make you try to stay
+And maybe when you get back
+I'll be off to find another way
+And after all this time that you still owe
+You're still a good-for-nothing, I don't know
+So take your gloves and get out
+Better get out while you can
+When you go, and would you even turn to say
+"I don't love you like I did yesterday"?
+Sometimes I cry so hard from pleading
+So sick and tired of all the needless beating
+But baby, when they knock you down and out
+Is where you oughta stay
+And after all the blood that you still owe
+Another dollar's just another blow
+So fix your eyes and get up
+Better get up while you can
+Whoa, whoa, whoa-whoa, whoa-whoa
+When you go, and would you even turn to say
+"I don't love you like I did yesterday"?
+Well, come on, come on
+When you go, would you have the guts to say
+"I don't love you like I loved you yesterday"?
+I don't love you like I loved you yesterday
+I don't love you like I loved you yesterday`;
+lyricsEl.textContent = lyrics;
