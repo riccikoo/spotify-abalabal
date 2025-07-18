@@ -18,8 +18,8 @@ jobs:
       - name: Deploy to ECS
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-107-151-188.ap-southeast-2.compute.amazonaws.com << 'EOF'
-          cd /var/www/cicd
-          git pull origin main
+          cd /var/www/html/cicd
+          sudo git pull origin main
           # Restart Nginx or any other service if needed
           sudo systemctl restart nginx
           EOF
