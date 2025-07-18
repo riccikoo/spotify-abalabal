@@ -7,26 +7,43 @@ let isPlaying = false;
 
 // Lirik: [waktu (detik), "teks"]
 const lyrics = [
-  [5, "Well, when you go"],
-  [10, "Don't ever think I'll make you try to stay"],
-  [15, "And maybe when you get back"],
-  [18, "I'll be off to find another way"],
-  [25, "And after all this time that you still owe"],
-  [30, "You're still the good-for-nothing I don't know"],
-  [35, "So take your gloves and get out"],
-  [39, "Better get out while you can"],
-  [45, "When you go, would you even turn to say"],
-  [50, "I don't love you like I did yesterday"],
-  [75, "Sometimes I cry so hard from pleading"],
-  [80, "So sick and tired of all the needless beating"],
-  [85, "But baby when they knock you down and out"],
-  [89, "It's where you oughta stay"],
-  [95, "And after all the blood that you still owe"],
-  [100, "Another dollar's just another blow"],
-  [105, "So fix your eyes and get up"],
-  [110, "Better get up while you can"],
-  [120, "When you go, would you even turn to say"],
-  [125, "I don't love you like I did yesterday"],
+  { time: 6, text: "Well, when you go" },
+  { time: 11, text: "Don't ever think I'll make you try to stay" },
+  { time: 18, text: "And maybe when you get back" },
+  { time: 22, text: "I'll be off to find another way" },
+
+  { time: 28, text: "And after all this time that you still owe" },
+  { time: 34, text: "You're still a good-for-nothing I don't know" },
+  { time: 40, text: "So take your gloves and get out" },
+  { time: 44, text: "Better get out while you can" },
+
+  { time: 49, text: "When you go" },
+  { time: 52, text: "Would you even turn to say" },
+  { time: 56, text: "I don't love you like I did yesterday" },
+
+  { time: 67, text: "Sometimes I cry so hard from pleading" },
+  { time: 72, text: "So sick and tired of all the needless beating" },
+  { time: 79, text: "But baby, when they knock you down and out" },
+  { time: 84, text: "It's where you ought to stay" },
+
+  { time: 90, text: "And after all the blood that you still owe" },
+  { time: 95, text: "Another dollar's just another blow" },
+  { time: 102, text: "So fix your eyes and get up" },
+  { time: 106, text: "Better get up while you can" },
+
+  { time: 111, text: "Whoa, whoa" },
+
+  { time: 116, text: "When you go" },
+  { time: 120, text: "Would you even turn to say" },
+  { time: 125, text: "I don't love you like I did yesterday" },
+
+  { time: 135, text: "Well come on, come on" },
+  { time: 140, text: "When you go" },
+  { time: 144, text: "Would you have the guts to say" },
+  { time: 149, text: "I don't love you like I loved you yesterday" },
+
+  { time: 157, text: "I don't love you like I loved you yesterday" },
+  { time: 165, text: "I don't love you like I loved you yesterday" }
 ];
 
 // Render lirik ke dalam container
