@@ -1,12 +1,12 @@
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("play-pause");
 const progressBar = document.getElementById("progress-bar");
-const lyricsEl = document.getElementById("lyrics");
+const lyricsContainer = document.getElementById("lyrics-container");
 
 let isPlaying = false;
 
-// Lirik sinkron: [waktu_detik, 'lirik']
-const syncedLyrics = [
+// Lirik: [waktu (detik), "teks"]
+const lyrics = [
   [5, "Well, when you go"],
   [10, "Don't ever think I'll make you try to stay"],
   [15, "And maybe when you get back"],
@@ -17,7 +17,6 @@ const syncedLyrics = [
   [39, "Better get out while you can"],
   [45, "When you go, would you even turn to say"],
   [50, "I don't love you like I did yesterday"],
-  [60, "(pause instrumental...)"],
   [75, "Sometimes I cry so hard from pleading"],
   [80, "So sick and tired of all the needless beating"],
   [85, "But baby when they knock you down and out"],
@@ -26,14 +25,20 @@ const syncedLyrics = [
   [100, "Another dollar's just another blow"],
   [105, "So fix your eyes and get up"],
   [110, "Better get up while you can"],
-  [115, "Whoa-oh-oh..."],
   [120, "When you go, would you even turn to say"],
   [125, "I don't love you like I did yesterday"],
 ];
 
-let currentLyricIndex = 0;
+// Render lirik ke dalam container
+lyrics.forEach(([time, text], index) => {
+  const line = document.createElement("div");
+  line.classList.add("lyrics-line");
+  line.dataset.time = time;
+  line.textContent = text;
+  lyricsContainer.appendChild(line);
+});
 
-// Play/pause
+// Mainkan atau pause lagu
 playPauseBtn.addEventListener("click", () => {
   if (isPlaying) {
     audio.pause();
@@ -45,32 +50,30 @@ playPauseBtn.addEventListener("click", () => {
   isPlaying = !isPlaying;
 });
 
-// Update progress bar dan lirik
+// Update progress bar dan lirik aktif
 audio.addEventListener("timeupdate", () => {
   const currentTime = audio.currentTime;
   const duration = audio.duration;
 
-  // Update progress bar
+  // Progress bar
   progressBar.value = (currentTime / duration) * 100;
 
-  // Update lirik
-  if (
-    currentLyricIndex < syncedLyrics.length &&
-    currentTime >= syncedLyrics[currentLyricIndex][0]
-  ) {
-    const line = syncedLyrics[currentLyricIndex][1];
-    lyricsEl.textContent += line + "\n";
-    currentLyricIndex++;
-    lyricsEl.scrollTop = lyricsEl.scrollHeight;
-  }
+  // Highlight lirik
+  const lines = document.querySelectorAll(".lyrics-line");
+  let currentIndex = lyrics.findIndex(([time], i) =>
+    i === lyrics.length - 1 || (currentTime >= time && currentTime < lyrics[i + 1][0])
+  );
+
+  lines.forEach((line, index) => {
+    line.classList.toggle("active", index === currentIndex);
+    if (index === currentIndex) {
+      line.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
 });
 
-// Klik pada progress bar untuk seek
+// Seek dari progress bar
 progressBar.addEventListener("input", () => {
   const percent = progressBar.value;
   audio.currentTime = (percent / 100) * audio.duration;
-
-  // Reset lirik dan index
-  lyricsEl.textContent = "";
-  currentLyricIndex = 0;
 });

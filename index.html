@@ -8,25 +8,19 @@
 </head>
 <body>
   <div class="player-container">
-    <h1>"I Don't Love You" - My Chemical Romance</h1>
-    <img src="images/mcr.jpg" alt="My Chemical Romance" class="cover" />
+    <img src="images/mcr.jpg" alt="MCR" class="cover" />
+    <h1>I Don't Love You</h1>
+    <h2>My Chemical Romance</h2>
 
     <div class="controls">
       <button id="play-pause">Play</button>
-      <div class="progress-container">
-        <input type="range" id="progress-bar" value="0" min="0" max="100" />
-      </div>
+      <input type="range" id="progress-bar" value="0" min="0" max="100"/>
     </div>
 
-    <div id="now-playing" class="now-playing">
-      <p id="now-title">Now Playing: I Don't Love You</p>
-      <button id="play-pause">Play</button>
-      <audio id="audio" src="songs/My Chemical Romance - I Don't Love You.mp3"></audio>
-    </div>
+    <audio id="audio" src="songs/My Chemical Romance - I Don't Love You.mp3"></audio>
 
-    <div class="lyrics-container">
-      <h2>Lyrics</h2>
-      <pre id="lyrics"></pre>
+    <div class="lyrics-container" id="lyrics-container">
+      <!-- Baris lirik akan ditambahkan oleh JavaScript -->
     </div>
   </div>
 

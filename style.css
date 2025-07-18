@@ -14,24 +14,33 @@ body {
 
 .cover {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
   margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-weight: normal;
+  color: #aaa;
+  margin-bottom: 20px;
 }
 
 .controls {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #play-pause {
-  padding: 10px 20px;
-  font-size: 16px;
   background-color: #1db954;
+  color: white;
   border: none;
   border-radius: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
   cursor: pointer;
   margin-bottom: 10px;
 }
@@ -40,29 +49,27 @@ body {
   background-color: #1ed760;
 }
 
-.progress-container {
-  width: 100%;
-}
-
 #progress-bar {
   width: 100%;
 }
 
 .lyrics-container {
-  margin-top: 20px;
-  text-align: left;
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
   max-height: 300px;
   overflow-y: auto;
+  text-align: left;
 }
 
-.lyrics-container h2 {
-  margin-top: 0;
+.lyrics-line {
+  margin: 5px 0;
+  color: #ccc;
+  transition: all 0.2s ease-in-out;
 }
 
-pre {
-  white-space: pre-wrap;
-  line-height: 1.6;
+.lyrics-line.active {
+  color: #1db954;
+  font-weight: bold;
+  transform: scale(1.05);
 }
