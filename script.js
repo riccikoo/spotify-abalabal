@@ -7,43 +7,43 @@ let isPlaying = false;
 
 // Lirik: [waktu (detik), "teks"]
 const lyrics = [
-  [9, "Well, when you go"], // 6 + 3 = 9
-  [14, "Don't ever think I'll make you try to stay"], // 11 + 3 = 14
-  [21, "And maybe when you get back"], // 18 + 3 = 21
-  [25, "I'll be off to find another way"], // 22 + 3 = 25
+  [24, "Well, when you go"],
+  [29, "Don't ever think I'll make you try to stay"],
+  [36, "And maybe when you get back"],
+  [40, "I'll be off to find another way"],
 
-  [31, "And after all this time that you still owe"], // 28 + 3 = 31
-  [37, "You're still a good-for-nothing I don't know"], // 34 + 3 = 37
-  [43, "So take your gloves and get out"], // 40 + 3 = 43
-  [47, "Better get out while you can"], // 44 + 3 = 47
+  [46, "And after all this time that you still owe"],
+  [52, "You're still a good-for-nothing I don't know"],
+  [58, "So take your gloves and get out"],
+  [62, "Better get out while you can"],
 
-  [52, "When you go"], // 49 + 3 = 52
-  [55, "Would you even turn to say"], // 52 + 3 = 55
-  [59, "I don't love you like I did yesterday"], // 56 + 3 = 59
+  [67, "When you go"],
+  [70, "Would you even turn to say"],
+  [74, "I don't love you like I did yesterday"],
 
-  [70, "Sometimes I cry so hard from pleading"], // 67 + 3 = 70
-  [75, "So sick and tired of all the needless beating"], // 72 + 3 = 75
-  [82, "But baby, when they knock you down and out"], // 79 + 3 = 82
-  [87, "It's where you ought to stay"], // 84 + 3 = 87
+  [85, "Sometimes I cry so hard from pleading"],
+  [90, "So sick and tired of all the needless beating"],
+  [97, "But baby, when they knock you down and out"],
+  [102, "It's where you ought to stay"],
 
-  [93, "And after all the blood that you still owe"], // 90 + 3 = 93
-  [98, "Another dollar's just another blow"], // 95 + 3 = 98
-  [105, "So fix your eyes and get up"], // 102 + 3 = 105
-  [109, "Better get up while you can"], // 106 + 3 = 109
+  [108, "And after all the blood that you still owe"],
+  [113, "Another dollar's just another blow"],
+  [120, "So fix your eyes and get up"],
+  [124, "Better get up while you can"],
 
-  [114, "Whoa, whoa"], // 111 + 3 = 114
+  [129, "Whoa, whoa"],
 
-  [119, "When you go"], // 116 + 3 = 119
-  [123, "Would you even turn to say"], // 120 + 3 = 123
-  [128, "I don't love you like I did yesterday"], // 125 + 3 = 128
+  [134, "When you go"],
+  [138, "Would you even turn to say"],
+  [143, "I don't love you like I did yesterday"],
 
-  [138, "Well come on, come on"], // 135 + 3 = 138
-  [143, "When you go"], // 140 + 3 = 143
-  [147, "Would you have the guts to say"], // 144 + 3 = 147
-  [152, "I don't love you like I loved you yesterday"], // 149 + 3 = 152
+  [153, "Well come on, come on"],
+  [158, "When you go"],
+  [162, "Would you have the guts to say"],
+  [167, "I don't love you like I loved you yesterday"],
 
-  [160, "I don't love you like I loved you yesterday"], // 157 + 3 = 160
-  [168, "I don't love you like I loved you yesterday"] // 165 + 3 = 168
+  [175, "I don't love you like I loved you yesterday"],
+  [183, "I don't love you like I loved you yesterday"]
 ];
 
 // Render lirik ke dalam container
