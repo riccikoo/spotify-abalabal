@@ -17,7 +17,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Deploy to ECS
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@3.107.155.30 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@3.25.78.253 << 'EOF'
           cd /var/www/html/cicd/spotify-abalabal
           sudo git pull origin main
           # Restart Nginx or any other service if needed
